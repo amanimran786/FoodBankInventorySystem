@@ -80,9 +80,9 @@ Presentation Flow Suggestion:
 
 Contact:
 --------
-Author: [Your Name]
-Email: [Your Email] (optional)
-Date: [Presentation Date]
+Author: Aman Imran
+Email: abdullahimran234@gmail.com
+Date: 05/05/2025
 
 =============================================
 
