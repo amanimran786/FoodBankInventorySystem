@@ -28,60 +28,106 @@ Core Features:
 - Alert for low-stock food items
 - Generate reports like total inventory per bank and most transferred food items
 - Real sample data for demonstration
+- Mathematical notation representation for relational operations (projection, selection, join)
 
 Files Included:
 ---------------
 
-00_sample_data.sql
-    - Inserts sample food banks, donors, food items, inventory entries, recipients, distributions, and transfer records for demo purposes.
+**SQL Commands for Presentation (15 Total):**
 
-01_view_food_banks.sql
+01_insert_food_banks.sql  
+    - [BASIC] Insert sample food banks.
+
+02_insert_donors.sql  
+    - [BASIC] Insert sample donors.
+
+03_insert_food_items.sql  
+    - [BASIC] Insert sample food items.
+
+04_insert_inventory_entries.sql  
+    - [BASIC] Insert sample inventory entries.
+
+05_insert_recipients.sql  
+    - [BASIC] Insert sample recipients.
+
+06_insert_distributions.sql  
+    - [BASIC] Insert sample distributions.
+
+07_insert_distributed_items.sql  
+    - [BASIC] Insert sample distributed items.
+
+08_insert_transfers.sql  
+    - [BASIC] Insert sample transfers.
+
+09_select_all_food_banks.sql  
     - [BASIC] View all food banks.
 
-02_view_donors.sql
+10_select_all_donors.sql  
     - [BASIC] View all donors.
 
-03_view_food_items.sql
-    - [BASIC] View all food items, sorted by shelf life.
+11_select_all_food_items_sorted.sql  
+    - [BASIC] View all food items sorted by shelf life.
 
-04_view_recipients.sql
+12_select_all_recipients.sql  
     - [BASIC] View all recipients.
 
-05_inventory_by_foodbank.sql
-    - [INTERMEDIATE] View current inventory available at each food bank.
+13_view_inventory_by_foodbank.sql  
+    - [INTERMEDIATE] View inventory available at each food bank.
 
-06_low_stock_items.sql
+14_view_low_stock_items.sql  
     - [INTERMEDIATE] List food items with quantity less than 50 units.
 
-07_transfer_history.sql
+15_view_transfer_history.sql  
     - [ADVANCED] View full transfer history showing movement between food banks.
 
-08_most_transferred_items.sql
-    - [ADVANCED] Show food items that have been transferred the most between banks.
+**Mathematical Notation Queries (8 Total):**
 
-09_banks_with_most_inventory.sql
-    - [ADVANCED] Show food banks with the highest total inventory.
+M01_select_all_food_banks.sql  
+    - [BASIC] Projection π on Food_Bank table.
+
+M02_select_all_donors.sql  
+    - [BASIC] Projection π on Donor table.
+
+M03_select_all_food_items_sorted.sql  
+    - [BASIC] Projection π + sort on Food_Item table.
+
+M04_select_all_recipients.sql  
+    - [BASIC] Projection π on Recipient table.
+
+M05_insert_distributed_items.sql  
+    - [BASIC] Insert operation into Distributed_Item relation.
+
+M06_view_inventory_by_foodbank.sql  
+    - [INTERMEDIATE] Join ⨝ between Inventory, Food_Bank, Food_Item.
+
+M07_view_low_stock_items.sql  
+    - [INTERMEDIATE] Join ⨝ and Selection σ on Inventory where Quantity < 50.
+
+M08_view_transfer_history.sql  
+    - [ADVANCED] Multi-Join ⨝ operation: Inventory_Transfer → Food_Item → Source Bank → Destination Bank.
 
 Execution Instructions:
 ------------------------
 1. Open MySQL Workbench.
 2. Connect to your database server.
 3. Run the `CREATE DATABASE` script to create the database (provided separately if needed).
-4. Run `00_sample_data.sql` to insert sample records into the database.
-5. Execute each of the query files (01 through 09) to demonstrate database functionality.
+4. Run the sample insert scripts (01-08) to populate the database.
+5. Execute each of the SELECT query files (09-15) to demonstrate database functionality.
+6. Use Mathematical Notation query files (M01-M08) to explain relational algebra logic separately.
 
 Presentation Flow Suggestion:
 ------------------------------
-- Start by running sample data script.
-- Then run BASIC queries first (01-04).
-- Move to INTERMEDIATE queries (05-06).
-- Finish with ADVANCED queries (07-09).
-- Optionally discuss how the system can be expanded (e.g., adding automatic alerts for expirations).
+- Start by running sample data scripts (01-08).
+- Demonstrate BASIC queries first (09-12).
+- Move to INTERMEDIATE queries (13-14).
+- Finish with ADVANCED query (15).
+- After demonstration, present Mathematical Notation queries separately (M01-M08).
+- Optionally discuss how the system can be expanded (e.g., adding automatic expiration alerts, automation).
 
 Contact:
 --------
-Author: Aman Imran
-Email: abdullahimran234@gmail.com
+Author: Aman Imran  
+Email: abdullahimran234@gmail.com  
 Date: 05/05/2025
 
 =============================================
