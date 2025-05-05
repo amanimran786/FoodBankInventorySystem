@@ -35,93 +35,94 @@ Files Included:
 
 **SQL Commands for Presentation (15 Total):**
 
-01_insert_food_banks.sql  
-    - [BASIC] Insert sample food banks.
+BasicQ1FoodbankByName.sql
+    - List names and address of all food banks, sorted alphabetically by foodbank name
 
-02_insert_donors.sql  
-    - [BASIC] Insert sample donors.
+BasicQ2InventoryEntry.sql
+    - Count number of inventory entries for each item
 
-03_insert_food_items.sql  
-    - [BASIC] Insert sample food items.
+BasicQ3NameWithS.sql
+    - Show recipients whose name starts with “S”
 
-04_insert_inventory_entries.sql  
-    - [BASIC] Insert sample inventory entries.
+BasicQ4StaffNameAndPlace.sql
+    -List names of staff and the food bank they work at
+ 
+BasicQ5InventoryIDandName.sql
+    -Inventory ID and Item names of food whose quantity is less than 100
 
-05_insert_recipients.sql  
-    - [BASIC] Insert sample recipients.
+IntermediateQ1Donations.sql
+    -List all food items and who donated them as well as quantity donated
 
-06_insert_distributions.sql  
-    - [BASIC] Insert sample distributions.
+IntermediateQ2RecipientsAndLocation.sql
+    -Show recipients and the food bank that distributed to them
 
-07_insert_distributed_items.sql  
-    - [BASIC] Insert sample distributed items.
+IntermediateQ3ShelfLife.sql
+    -Desc: Show food items and their shelf life that are expiring within 6 months
 
-08_insert_transfers.sql  
-    - [BASIC] Insert sample transfers.
+IntermediateQ4Staff&Roles.sql
+    -List all staff as well as which food bank they work at and their role
 
-09_select_all_food_banks.sql  
-    - [BASIC] View all food banks.
+IntermediateQ5LastDist.sql
+    -List the most recent distribution date for each recipient 
 
-10_select_all_donors.sql  
-    - [BASIC] View all donors.
+AdvancedQ1Top3Donors.sql
+    - Top 3 donors based on the quantity of distributed food
 
-11_select_all_food_items_sorted.sql  
-    - [BASIC] View all food items sorted by shelf life.
+AdvancedQ2HighestCanned.sql
+    - Food bank that has distributed the highest amt of Canned Goods and how many they have distributed
 
-12_select_all_recipients.sql  
-    - [BASIC] View all recipients.
+AdvancedQ3HigherThanAvg.sql
+    - Food banks that have distributed more food than the avg amount of items distributed by all food banks
 
-13_view_inventory_by_foodbank.sql  
-    - [INTERMEDIATE] View inventory available at each food bank.
+AdvancedQ4Top5Highest.sql
+    - Top 5 food banks with the highest total number of distributed items 
 
-14_view_low_stock_items.sql  
-    - [INTERMEDIATE] List food items with quantity less than 50 units.
-
-15_view_transfer_history.sql  
-    - [ADVANCED] View full transfer history showing movement between food banks.
+AdvancedQ5MoreThanAvgRecieved.sql
+    - Show recipients who received more items than the avg recipient and the amount they have received 
 
 **Mathematical Notation Queries (8 Total):**
 
-M01_select_all_food_banks.sql  
-    - [BASIC] Projection π on Food_Bank table.
+BasicMathematical1.sql
+    - Display information of Donors who are an organization
 
-M02_select_all_donors.sql  
-    - [BASIC] Projection π on Donor table.
+BasicMathematical2.sql
+    - Name and Email of managers
 
-M03_select_all_food_items_sorted.sql  
-    - [BASIC] Projection π + sort on Food_Item table.
+BasicMathematical3.sql
+    - List the names of Foodbank volunteers
 
-M04_select_all_recipients.sql  
-    - [BASIC] Projection π on Recipient table.
+BasicMathematical4.sql
+    - List all the Food item names 
 
-M05_insert_distributed_items.sql  
-    - [BASIC] Insert operation into Distributed_Item relation.
+BasicMathematical5.sql
+    - List foodbank ids that have inventory
 
-M06_view_inventory_by_foodbank.sql  
-    - [INTERMEDIATE] Join ⨝ between Inventory, Food_Bank, Food_Item.
+IntermediateMathematical1.sql 
+    - List the item ID and how many of that item were distributed
+    
+IntermediateMathematical2.sql
+    - List item id, how many were donated, and the distribution date of items from 5/01 to 5/05
 
-M07_view_low_stock_items.sql  
-    - [INTERMEDIATE] Join ⨝ and Selection σ on Inventory where Quantity < 50.
 
-M08_view_transfer_history.sql  
-    - [ADVANCED] Multi-Join ⨝ operation: Inventory_Transfer → Food_Item → Source Bank → Destination Bank.
+AdvancedMathematical.sql
+    - Show food banks and their maximum distributed quantity for any item
+
 
 Execution Instructions:
 ------------------------
 1. Open MySQL Workbench.
 2. Connect to your database server.
 3. Run the `CREATE DATABASE` script to create the database (provided separately if needed).
-4. Run the sample insert scripts (01-08) to populate the database.
-5. Execute each of the SELECT query files (09-15) to demonstrate database functionality.
-6. Use Mathematical Notation query files (M01-M08) to explain relational algebra logic separately.
+4. Run the insert scripts to fill tables
+5. Execute queries 
 
 Presentation Flow Suggestion:
 ------------------------------
-- Start by running sample data scripts (01-08).
-- Demonstrate BASIC queries first (09-12).
-- Move to INTERMEDIATE queries (13-14).
-- Finish with ADVANCED query (15).
-- After demonstration, present Mathematical Notation queries separately (M01-M08).
+- Preload tables with file names with Insert
+- Demonstrate 5 BASIC queries first
+- Move to 5 INTERMEDIATE queries 
+- Finish with 5 ADVANCED queries 
+- After demonstration, present Mathematical Notation queries separately 
 - Optionally discuss how the system can be expanded (e.g., adding automatic expiration alerts, automation).
 
 Contact:
@@ -130,6 +131,8 @@ Author: Aman Imran
 Email: abdullahimran234@gmail.com  
 Date: 05/05/2025
 
+Author: Albert Van
+email: albertvan755891@gmail.com
 =============================================
 
 Thank you!
